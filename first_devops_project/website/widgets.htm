@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A little about us...</title>
+<meta name="description" content="A lynda.com example of HTML5 and CSS3">
+<meta name="keywords" content="html5, css3, lynda, local storage, canvas, forms, semantics, web apps">
+<!--make sure mobile devices display the page at the proper scale	-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="_css/main.css" rel="stylesheet" type="text/css" media="screen, projection">
+<link href="_css/jquery_widgets.css" rel="stylesheet" media="screen, projection" />	
+<link href="_css/tablet.css" rel="stylesheet" type="text/css" media="all and (min-width: 481px) and (max-width: 768px)" />
+<link href="_css/mobile.css" rel="stylesheet" type="text/css" media="all and (min-width: 0px) and (max-width: 480px)" />
+<script src="_scripts/jquery-1.5.1.min.js"></script>
+<script src="_scripts/jquery-ui-1.8.10.custom.min.js"></script>
+<script src="_scripts/menus.js"></script>
+<!-- you'll need to manually insert the initialization script, as I did not add it to all the pages, feel free to externalize these if you wish -->
+<script type="text/javascript">
+			$(function(){
+				//this shows the initialization of all widgets, obviously only use the ones you need...
+				// Accordion
+				$("#accordion").accordion({ header: "h3" });
+				//set the autoHeight value to true if you want consistent panel heights, set it to false if you want the panel heights to be determined by content. The default option, if the line below is left out, if 'true'
+				$( "#accordion" ).accordion({ autoHeight: false });
+	
+				// Tabs
+				$('#tabs').tabs();
+	
+
+				// Dialog			
+				$('#dialog').dialog({
+					autoOpen: false,
+					width: 600,
+					buttons: {
+						"Ok": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"Cancel": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				// Dialog Link
+				$('#dialog_link').click(function(){
+					$('#dialog').dialog('open');
+					return false;
+				});
+
+				// Datepicker
+				$('#datepicker').datepicker({
+					inline: true
+				});
+				
+				// Slider
+				$('#slider').slider({
+					range: true,
+					values: [17, 67]
+				});
+				
+				// Progressbar
+				$("#progressbar").progressbar({
+					value: 20 
+				});
+				
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); }, 
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+				
+			});
+		</script>
+</head>
+<body class="no-js">
+<div id="wrapper">
+  <header id="mainHeader"> <a href="index.htm" title="home" class="logo">
+   <!-- I need this div because IE is an affront to mankind-->
+    <div id="logo">
+    <h1>Explore California</h1>
+    </div>
+    </a>
+    <nav id="siteNav">
+      <h1>Where do you want to go?</h1>
+      <ul>
+       <li><a href="tours.htm" title="Our tours">Tours <br /><span class="tagline">follow our bliss</span></a>
+          <ul>
+            <li><a href="tours.htm" title="Our tours">All Tours</a></li>
+            <li><a href="tours.htm" title="find tours">Tours by Activity</a></li>
+            <li><a href="tours.htm" title="find tours">Tours by Region</a></li>
+            <li><a href="tours.htm" title="find tours">Tour Finder</a></li>
+          </ul>
+        </li>
+        <li><a href="mission.htm" title="What we believe">Mission <br /><span class="tagline">what makes us different?</span></a></li>
+        <li><a href="resources.htm" title="planning resources">Resources <br /><span class="tagline">plan your trip</span></a>
+          <ul>
+            <li><a href="resources/faq.htm" title="Got questions?">Tour FAQs</a></li>
+            <li><a href="resources/additional_resources.htm" title="additional resources">Tour Information</a></li>
+            <li><a href="resources/terms.htm" title="terms and conditions">Site Terms</a></li>
+          </ul>
+        </li>
+        <li><a href="explorers.htm" title="Our community">Explorers <br /><span class="tagline">join our community</span></a>
+          <ul>
+            <li><a href="explorers/join.htm" title="join our community">Join the Explorers</a></li>
+            <li><a href="blog/index.htm" title="read our blog!">Read our Blog</a></li>
+            <li><a href="explorers/gallery.htm" title="contributor photos">Tour Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.htm" title="contact us" class="last">Contact <br /><span class="tagline">we're listening</span></a>
+          <ul>
+            <li><a href="support.htm" title="need help?">Support</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section id="mainContent">
+  <header id="contentHeader">
+  <h1>Widgets</h1>
+  </header>
+ <article id="mainArticle"> <h1>Need a UI Widget?</h1>
+ <img src="_images/looking.jpg" alt="Plan your tour" class="articleImage" />
+ <div class="multiCol"> 
+     <h2> Using Widgets</h2>
+     <p>Occasionally you may want to use a widget or two for your projects. I've included the jQueryUI library and created a custom theme that is styled to work with the Explore California site. Below you'll find examples of the Accordion Widget and Tab Widget, the two that I thought it most likely you would want to use. You might also be interested in the <a href="http://jqueryui.com/demos/datepicker/" target="_blank">Datepicker</a>, especially if you want to show how to provide fallback content for HTML5 datepicker form elements. You can look at the source code for structure or copy and paste the widgets into any page and fill them with your content. </p>
+     <p>You aren't limited to these two widgets of course. For more information on available widgets, and how to use them, please visit the <a href="http://jqueryui.com/home" target="_blank">jQueryUI hompage</a>. As is, the widgets represent the default behavior, but feel free to customize the animation or the CSS any way you wish. If you try to edit the color scheme, keep in mind that the theme is using PNG files for the backgrounds of tabs and headers. Changing them out can be a pain, so if you want to customize those areas either <a href="http://jqueryui.com/themeroller/" target="_blank">generate another theme</a>, or <a href="mailto:james@lynda.com">contact me</a> and I'll help you out.</p>
+ </div>
+ <!-- Accordion -->
+		<h2>Accordion</h2>
+		<div id="accordion">
+			<div>
+				<h3><a href="#">First</a></h3>
+				<div>
+				  <h2>You can use any content you want.</h2> 
+              <p>You could have pictures of puppies. Or kittens, or perhaps a nice cupcake. You might not use images at all, and prefer to use a table, some text, or maybe a nice Penn &amp; Teller video. It simple doesn't matter. This is a div, put anything in it you want.</p>
+              <p>However, be careful. <strong>H3</strong>'s are set to be the header sections, so if you need to use one, keep in mind that the default behavior is for it to become another, nested, header. If you REALLY need to use <strong>H3</strong>'s, change the header elements and then pass the change into the widget: </p>
+              <pre>$( ".selector" ).accordion({ header: 'h3' });</pre>
+              <p>For example, if you wanted to change this widget to accept H6 as the new headers you would use this:</p>
+              <pre>$('#accordion').accordion({ header: 'h6' });</pre>
+              <p>Also, I've got this accordion set so that autoHeight is false. That means the panels flex in size based on the content. If you set it to true (which is the default state) then the panels are all the same height, based on the tallest content. If you want same sized panels, do nothing. If you want this behavior (change height based on content), add the following code:</p>
+              <pre>$( &quot;#accordion&quot; ).accordion({ autoHeight: false });</pre>
+              <p>&nbsp;</p>
+              </div>
+			</div>
+			<div>
+				<h3><a href="#">Second</a></h3>
+				<div>
+				  <p>It could be a single line, note how the accordion flexes.</p>
+				</div>
+			</div>
+			<div>
+				<h3><a href="#">Third</a></h3>
+				<div>
+				  <p>Or you could have crazy cool stuff in here, like this (I think this is where our models broke up):</p>
+				  <p><img src="_images/breakup.jpg" width="250" height="250" alt="I'm just not into you"></p>
+				  <p>&nbsp;</p>
+				</div>
+			</div>
+		</div>
+        <!-- Tabs -->
+		<h2>Tab Widget</h2>
+	  <div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Content</a></li>
+				<li><a href="#tabs-2">Options</a></li>
+				<li><a href="#tabs-3">One more thing</a></li>
+			</ul>
+			<div id="tabs-1">
+			  <h2>Again feel free to put anything in here.</h2>
+              <p>You don't have any content restrictions like you do with the accordion. The tabs are created by an unordered list at the top, so if you want to add more tabs, just add another div, give it the next id in the series("tabs-1") and then add a corresponding "li" to the menu. Simple!
+    </div>
+			<div id="tabs-2">
+			  <h2>Some options</h2>
+			  <p>Obviously, for more options, check out the <a href="http://jqueryui.com/demos/tabs/" target="_blank">jQuery UI page on tabs</a>. Here are a few to get you started:</p>
+			  <h3>Setting active tab</h3>
+			  <p>This can be done through the use of the disabled option, simply pass an array that leaves out the tab you want enabled,:</p>
+			  <pre>$( ".selector" ).tabs({ disabled: [1, 2] });</pre>
+			  <p>Or, if you don't feel like passing a whole array, you can simply use selected (which is easier, IMO):</p>
+			  <pre>$( ".selector" ).tabs({ selected: 3 });</pre>
+			  <h3>Changing default event</h3>
+			  <p>Want the tab to activate based on mouseover or other event? Easy enough:</p>
+			  <pre>$( ".selector" ).tabs({ event: 'mouseover' });</pre>
+			  <h3>Transition effects</h3>
+			  <p>You'll need to read up on them to know which ones you can use, but it's pretty easy to change the tabs to an animated transition if you want:</p>
+			  <pre>$( ".selector" ).tabs({ fx: { opacity: 'toggle' } });</pre>
+			  <p>&nbsp;</p>
+          </div>
+			<div id="tabs-3">
+			  <h2>Oh yeah,</h2>
+			  <p>If you change the CSS for these, be careful. The CSS theme is specially customized to work with the other Explore California stylesheet...so it's really easy to cause specificity issues. This will only effect the widgets, as their CSS is segregated, but it can still cause headaches.</p>
+	      </div>
+		</div>
+ </article>
+ </section>
+  <aside id="secondaryContent">
+  <div id="specials" class="callOut">
+        <h1>Monthly Specials</h1>
+        <h2 class="top"><img src="_images/calm_bug.gif" alt="California Calm" width="75" height="75" />California Calm</h2>
+        <p>Day Spa Package <br />
+          <a href="tours/tour_detail_cycle.htm">$250</a></p>
+        <h2><img src="_images/desert_bug.gif" alt="From desert to sea" width="75" height="75" />From Desert to Sea</h2>
+        <p>2 Day Salton Sea <br />
+          <a href="tours/tour_detail_cycle.htm">$350</a></p>
+        <h2><img src="_images/backpack_bug.gif" alt="Backpack Cali" width="75" height="41" />Backpack Cali</h2>
+        <p>Big Sur Retreat <br />
+          <a href="tours/tour_detail_cycle.htm">$620</a></p>
+          <h2><img src="_images/taste_bug.gif" alt="Taste of California" width="75" height="75" />Taste of California</h2>
+        <p>Tapas &amp; Groves <br />
+          <a href="tours/tour_detail_taste.htm">$150</a></p>
+      </div>
+      <div id="trivia" class="callOut">
+        <h1>Did You Know?</h1>
+        <p>California produces over 17 million gallons of wine each year! Additional facts can be found in the <br>
+        &quot;_assets&quot; folder in the <em>Explore_cali_fact_files.doc</em> Use as you see fit.</p>
+        </div>
+  </aside>
+  <footer id="pageFooter">
+  <section id="quickLinks">
+  <h1>Quick Nav</h1>
+    <ul id="quickNav">
+      <li><a href="index.htm" title="Our home page">Home</a></li>
+      <li><a href="tours.htm" title="Explore our tours">Tours</a></li>
+      <li><a href="mission.htm" title="What we think">Mission</a></li>
+      <li><a href="resources.htm" title="Guidance and planning">Resources</a></li>
+      <li><a href="explorers.htm" title="Join our community">Explorers</a></li>
+      <li><a href="contact.htm" title="Contact and support">Contact</a></li>
+    </ul>
+    </section>
+  <section id="footerResources">
+  <h1>Resources</h1>
+    <ul id="quickNav">
+      <li><a href="resources/faq.htm" title="Our home page">FAQ</a></li>
+      <li><a href="support.htm" title="Need help?">Support</a></li>
+      <li><a href="resources/legal.htm" title="The fine print">Legal</a></li>
+    </ul>
+  </section>
+  <section id="companyInfo">
+  <h1>Contact</h1>
+  <h2>Explore California</h2>
+      <p>5605 Nota Street<br />
+        Ventura, CA 93003</p>
+      <p>866.555.4310<br />866.555.4315 <em>(24 hour support)</em></p>
+  </section>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Your title goes here</title>
+<meta name="description" content="A lynda.com example of HTML5 and CSS3">
+<meta name="keywords" content="html5, css3, lynda, local storage, canvas, forms, semantics, web apps">
+<!--make sure mobile devices display the page at the proper scale	-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="_css/main.css" rel="stylesheet" type="text/css" media="screen, projection">
+<link href="_css/jquery_widgets.css" rel="stylesheet" media="screen, projection" />	
+<link href="_css/tablet.css" rel="stylesheet" type="text/css" media="all and (min-width: 481px) and (max-width: 768px)" />
+<link href="_css/mobile.css" rel="stylesheet" type="text/css" media="all and (min-width: 0px) and (max-width: 480px)" />
+<script src="_scripts/jquery-1.5.1.min.js"></script>
+<script src="_scripts/jquery-ui-1.8.10.custom.min.js"></script>
+<script src="_scripts/menus.js"></script>
+</head>
+<body class="no-js">
+<div id="wrapper">
+  <header id="mainHeader"> <a href="index.htm" title="home" class="logo">
+   <!-- I need this div because IE is an affront to mankind-->
+    <div id="logo">
+    <h1>Explore California</h1>
+    </div>
+    </a>
+    <nav id="siteNav">
+      <h1>Where do you want to go?</h1>
+      <ul>
+       <li><a href="tours.htm" title="Our tours">Tours <br /><span class="tagline">follow our bliss</span></a>
+          <ul>
+            <li><a href="tours.htm" title="Our tours">All Tours</a></li>
+            <li><a href="tours.htm" title="find tours">Tours by Activity</a></li>
+            <li><a href="tours.htm" title="find tours">Tours by Region</a></li>
+            <li><a href="tours.htm" title="find tours">Tour Finder</a></li>
+          </ul>
+        </li>
+        <li><a href="mission.htm" title="What we believe">Mission <br /><span class="tagline">what makes us different?</span></a></li>
+        <li><a href="resources.htm" title="planning resources">Resources <br /><span class="tagline">plan your trip</span></a>
+          <ul>
+            <li><a href="resources/faq.htm" title="Got questions?">Tour FAQs</a></li>
+            <li><a href="resources/additional_resources.htm" title="additional resources">Tour Information</a></li>
+            <li><a href="resources/terms.htm" title="terms and conditions">Site Terms</a></li>
+          </ul>
+        </li>
+        <li><a href="explorers.htm" title="Our community">Explorers <br /><span class="tagline">join our community</span></a>
+          <ul>
+            <li><a href="explorers/join.htm" title="join our community">Join the Explorers</a></li>
+            <li><a href="blog/index.htm" title="read our blog!">Read our Blog</a></li>
+            <li><a href="explorers/gallery.htm" title="contributor photos">Tour Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.htm" title="contact us" class="last">Contact <br /><span class="tagline">we're listening</span></a>
+          <ul>
+            <li><a href="support.htm" title="need help?">Support</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section id="mainContent">
+  <header id="contentHeader">
+  <h1>Page ID</h1>
+  </header>
+ <article id="mainArticle"> <h1>Main Heading H1</h1>
+ <img src="_images/looking.jpg" alt="Plan your tour" width="715" height="315" class="articleImage" />
+ <div class="multiCol"> 
+   <div id="lipsum">
+     <p><a href="#">This is what a link looks like</a>. Cras sit amet justo quam, vel interdum ante. Aenean libero  augue, molestie non elementum eu, mattis vitae dui. Integer iaculis  pharetra mauris, in vestibulum leo consequat quis. Suspendisse est nunc,  rutrum a rutrum eu, varius pellentesque velit. </p>
+<h2>Subheading | H2</h2>
+     <p> Morbi sodales pellentesque mi, in aliquam leo elementum nec. Vivamus  commodo, sem sed vestibulum placerat, nunc magna ornare nibh, vel  lacinia odio massa vitae mauris. Vivamus sodales tempor lacus, vel  tincidunt enim aliquet nec. Nam accumsan neque sit amet lectus ultricies  facilisis nec in sapien. Fusce placerat turpis augue, imperdiet gravida  augue. Aenean libero  augue, molestie non elementum eu, mattis vitae dui. Integer iaculis  pharetra mauris, in vestibulum leo consequat quis. Suspendisse est nunc,  rutrum a rutrum eu, varius pellentesque velit. </p>
+     <h3>Sub-sub heading | H3</h3>
+     <p>Vestibulum lacinia scelerisque risus ac facilisis. Cras  ullamcorper posuere rhoncus. Nunc mollis massa et nisi lacinia id rutrum  leo accumsan. Praesent convallis adipiscing neque a egestas. Aenean libero  augue, molestie non elementum eu, mattis vitae dui. Integer iaculis  pharetra mauris, in vestibulum leo consequat quis. Suspendisse est nunc,  rutrum a rutrum eu, varius pellentesque velit. </p>
+   </div>
+ </div>
+   <ul>
+     <li>Make sure you make lists and other structures OUTSIDE the multi col div</li>
+     <li>This is item 2</li>
+     <li>This is item 3
+       <ul>
+         <li>This is a nested list</li>
+         <li>This is the second nested item</li>
+         </ul>
+     </li>
+     <li>This is me finishing up the list</li>
+     </ul>
+   <h2>Table Example 1: &quot;simple&quot; class applied to table</h2>
+   <table class="simple" cellspacing="0" cellpadding="0">
+    <caption>TRAIL INFO <time datetime="2010-05-04T12:30-05:00">updated 05/04/10 12:30pm</time></caption>
+      <tr>
+        <thead>
+<th>trail name</th>
+        <th>trail status</th>
+        <th>trail type</th>
+        <th>elevation</th>
+        <th>length</th>
+        <th>skill level</th>
+</thead>
+        </tr>
+      <tr class="alt">
+        <td>Molera Loop</td>
+        <td>open</td>
+        <td>single track</td>
+        <td>2000 ft</td>
+        <td>14.5 miles</td>
+        <td>beginner to intermediate</td>
+        </tr>
+      <tr>
+        <td>Cruickshank Trail</td>
+        <td>open</td>
+        <td>loop</td>
+        <td>1,200 ft</td>
+        <td>6 miles</td>
+        <td>advanced</td>
+        </tr>
+      <tr class="alt">
+        <td>Ewoldsen Trail</td>
+        <td>partial</td>
+        <td>loop</td>
+        <td>1,600 ft</td>
+        <td>4.5 miles</td>
+        <td>intermediate</td>
+        </tr>
+      <tr>
+        <td>Vicente Flat Trail</td>
+        <td>closed</td>
+        <td>out &amp; back</td>
+        <td>1,800 ft</td>
+        <td>10.2 miles</td>
+        <td>advanced</td>
+        </tr>
+    </table>
+    <h2>Table Example 2: &quot;simple&quot; and &quot;small&quot; classes applied to table</h2>
+   <table class="simple small" cellspacing="0" cellpadding="0">
+    <caption>TRAIL INFO <time datetime="2010-05-04T12:30-05:00">updated 05/04/10 12:30pm</time></caption>
+      <tr>
+        <th>trail status:</th>
+        <td><span class="open">all trails open</span></td>
+      </tr>
+      <tr class="alt">
+        <th>trail type:</th>
+        <td>single track</td>
+      </tr>
+      <tr>
+        <th>elevation:</th>
+        <td>2000 ft</td>
+      </tr>
+      <tr class="alt">
+        <th>length:</th>
+        <td>14.5 miles</td>
+      </tr>
+      <tr>
+        <th>skill level:</th>
+        <td>beginner to intermediate</td>
+      </tr>
+    </table>
+   <h2>Table Example 3: &quot;complex&quot; class applied to table w/ defined columns</h2>
+   <table border="0" cellspacing="0" cellpadding="0" summary="A listing of all hiking trails available for the Big Sur Retreat tour package" class="complex">
+        <caption>
+          Big Sur Retreat Hiking Trails
+        </caption>
+        <colgroup>
+      <col id="trailName" />
+      <col id="trailType" />
+      <col id="trailLength" />
+      <col id="trailPath" />
+      <col id="trailElevation" />
+      <col id="trailRating" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col" abbr="name">Trail Name</th>
+          <th scope="col" abbr="type">Type</th>
+          <th scope="col" abbr="length">Length</th>
+          <th scope="col" abbr="path">Path</th>
+          <th scope="col" abbr="elevation">Elevation</th>
+          <th scope="col" abbr="rating">Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">Andrew Molera Loop</th>
+          <td>Loop</td>
+          <td>8.8 miles</td>
+          <td>Groomed</td>
+          <td>1,100 ft</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <th scope="row">Cruickshank Trail</th>
+          <td>Up &amp; Back</td>
+          <td>6 miles</td>
+          <td>Steep</td>
+          <td>1,200 ft</td>
+          <td>Hard</td>
+        </tr>
+        <tr>
+          <th scope="row">Ewoldsen Trail</th>
+          <td>Loop</td>
+          <td>4.5 miles</td>
+          <td>Varied</td>
+          <td>1,600 ft</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <th scope="row">Jade Cove Trail</th>
+          <td>Loop</td>
+          <td>1.5 miles</td>
+          <td>Steep</td>
+          <td>120 ft</td>
+          <td>Hard</td>
+        </tr>
+        <tr>
+          <th scope="row">Limekiln Trail</th>
+          <td>Out &amp; Back</td>
+          <td>3 miles</td>
+          <td>Good</td>
+          <td>200 ft</td>
+          <td>Easy</td>
+        </tr>
+        <tr>
+          <th scope="row">McWay Falls Trail</th>
+          <td>Out &amp; Back</td>
+          <td>.64 mile</td>
+          <td>Flat</td>
+          <td>50 ft</td>
+          <td>Easy</td>
+        </tr>
+        <tr>
+          <th scope="row">Pfeiffer Falls Trail</th>
+          <td>Loop</td>
+          <td>2.4 miles</td>
+          <td>Groomed</td>
+          <td>450 ft</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <th scope="row">Ragged Point Fire Road</th>
+          <td>Up &amp; Back</td>
+          <td>4 miles</td>
+          <td>Graded road</td>
+          <td>1700 ft</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <th scope="row">Vicente Flat Trail</th>
+          <td>Out &amp; Back</td>
+          <td>10.2 miles</td>
+          <td>Steep, tricky</td>
+          <td>1,800 ft</td>
+          <td>Difficult</td>
+        </tr>
+        </tbody>
+      </table>
+ </article>
+ </section>
+  <aside id="secondaryContent">
+  <div id="specials" class="callOut">
+        <h1>Monthly Specials</h1>
+        <h2 class="top"><img src="_images/calm_bug.gif" alt="California Calm" width="75" height="75" />California Calm</h2>
+        <p>Day Spa Package <br />
+          <a href="tours/tour_detail_cycle.htm">$250</a></p>
+        <h2><img src="_images/desert_bug.gif" alt="From desert to sea" width="75" height="75" />From Desert to Sea</h2>
+        <p>2 Day Salton Sea <br />
+          <a href="tours/tour_detail_cycle.htm">$350</a></p>
+        <h2><img src="_images/backpack_bug.gif" alt="Backpack Cali" width="75" height="41" />Backpack Cali</h2>
+        <p>Big Sur Retreat <br />
+          <a href="tours/tour_detail_cycle.htm">$620</a></p>
+          <h2><img src="_images/taste_bug.gif" alt="Taste of California" width="75" height="75" />Taste of California</h2>
+        <p>Tapas &amp; Groves <br />
+          <a href="tours/tour_detail_taste.htm">$150</a></p>
+      </div>
+      <div id="trivia" class="callOut">
+        <h1>Did You Know?</h1>
+        <p>California produces over 17 million gallons of wine each year! Additional facts can be found in the <br>
+        &quot;_assets&quot; folder in the <em>Explore_cali_fact_files.doc</em> Use as you see fit.</p>
+        </div>
+  </aside>
+  <footer id="pageFooter">
+  <section id="quickLinks">
+  <h1>Quick Nav</h1>
+    <ul id="quickNav">
+      <li><a href="index.htm" title="Our home page">Home</a></li>
+      <li><a href="tours.htm" title="Explore our tours">Tours</a></li>
+      <li><a href="mission.htm" title="What we think">Mission</a></li>
+      <li><a href="resources.htm" title="Guidance and planning">Resources</a></li>
+      <li><a href="explorers.htm" title="Join our community">Explorers</a></li>
+      <li><a href="contact.htm" title="Contact and support">Contact</a></li>
+    </ul>
+    </section>
+  <section id="footerResources">
+  <h1>Resources</h1>
+    <ul id="quickNav">
+      <li><a href="resources/faq.htm" title="Our home page">FAQ</a></li>
+      <li><a href="support.htm" title="Need help?">Support</a></li>
+      <li><a href="resources/legal.htm" title="The fine print">Legal</a></li>
+    </ul>
+  </section>
+  <section id="companyInfo">
+  <h1>Contact</h1>
+  <h2>Explore California</h2>
+      <p>5605 Nota Street<br />
+        Ventura, CA 93003</p>
+      <p>866.555.4310<br />866.555.4315 <em>(24 hour support)</em></p>
+  </section>
+  </footer>
+</div>
+</body>
+</html>

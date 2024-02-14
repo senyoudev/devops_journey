@@ -1,0 +1,232 @@
+/* -------- color guide ----------
+#3c6b92 : main blue
+#6acce2 : light blue
+#2c566a : teal accent
+#193742 : dark blue
+#e1d8b9 : sand accent
+#cb7d20 : orange accent
+#51341a : brown
+#995522 : dark orange (used for links or high contrast accents)
+#cb202a : red accent (this color does not encode well, use only for small accents)
+#896287 : purple
+*/
+/* to jump to a specific section search for the unique character pair at the front of each TOC section 
+	<<<tip, highlight the special character and use the shortcut for Find Selection Cntr/Cmd + Shift + G >> */
+	
+	/* ----- Style sheet TOC ----------------
+      ^1 Global constants
+	  ^2 Global classes
+	  ^3 Home page layout
+	  ^4 Base Layout styles
+	  ^5 Region detail styles
+		  ^5a Header
+		  ^5b Navigation
+		  ^5c Main Content
+			  ^5d data tables
+			  ^5e spotlight region
+			  ^5f forms
+		  ^5g Secondary Content
+		  ^5h Footer
+*/
+/*It is important to remember that these styles are cumulative and in some cases overwrite the main.css styles. If you add to these styles, make sure you are properly overwriting previous styles*/
+
+/*Explore California Tablet Styles*/
+/* -------- import font rules ---------- */
+@import url(fonts.css);
+/* ^1 --------------------------- global constants -------------------------*/
+body {
+	text-align:center;
+	font: 90% DroidSerif, Georgia, "Times New Roman", Times, serif;
+	background: #3C6B92;
+	background: -moz-linear-gradient(top, #3c6b92 15%, #e1d8b9 90%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#3c6b92), color-stop(90%,#e1d8b9)); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c6b92', endColorstr='#e1d8b9',GradientType=0 ); 
+	margin:0;
+}
+/* ^2 ------ global classes -------- */
+#home .callOut {
+	width: 100%; 
+}
+.callOut {
+	width: 600px;
+	margin-left: 25px; 
+}
+
+/* ^3 ------------- home page specfic layout styles ----------- */
+#home #wrapper {
+	background: #000 url(../_images/home_page_back.jpg) no-repeat -50px 60px;
+}
+#actionCall {
+	height: 268px;
+}
+#actionCall h1{
+	display: none;
+}
+#actionCall a:link, #actionCall a:visited{
+	margin: 45px 0 0 385px;
+}
+#home #contentWrapper{
+	margin: 0 25px;
+	padding: 25px;
+	background: #fff;
+	background: rgba(255,255,255, 0.9);
+	float: left;
+	width: 600px;
+}
+#home #mainContent {
+	float: none;
+	width: 100%;
+	padding-right: 0;
+	margin-right: 0;
+}
+#home #mainContent #mainArticle h1 {
+	text-align: left;
+}
+#home #secondaryContent {
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	padding: 0;
+}
+#home #secondaryContent h1{
+	font-size: 2em;
+	font-weight: normal;
+}
+
+/* ^4 --------------------- base layout styles ------------------- */
+#wrapper {
+	width: 700px;
+}
+#mainContent {
+	float: none;
+	width: 650px;
+	margin:0 25px;
+	clear: both;
+	overflow: hidden;
+}
+
+#secondaryContent {
+	float: none;
+	margin:0;
+	width: 100%;
+	padding:0;
+}
+#pageFooter {
+	background: #ddd;/*#e1d8b9*/
+	overflow: hidden;
+	border-top: 1px solid #757575;
+	height: 300px;
+	width: 100%;
+}
+/* ^5----------------------- region-detail styles ------------------------ */
+/*  header  ^5a*/
+
+/* navigation ^5b*/
+#siteNav > ul {
+	height: 60px;
+	background-color: #b3b3b3;
+	width: 458px; /*add padding-left for total width*/
+	padding-left: 242px; /*allow logo to clear*/
+}
+#siteNav ul > li {
+	margin:1.5em 0 0;
+}
+#siteNav li a:link, #siteNav li a:visited{
+	padding: 0 10px;
+	font: .8em DejaVuSansCond, Arial, sans-serif;
+	color: #fff;
+}
+#siteNav li a.current, #siteNav li a.current:hover {
+	color: #3c6b92;
+}
+#siteNav li a:hover, #siteNav li a:active{
+	color: #3c6b92;
+}
+#siteNav li a:link span.tagline, #siteNav li a:visited span.tagline{
+	display: none;
+}
+#siteNav li ul {
+	display: none;
+}
+.no-js #siteNav li:hover ul, .no-js #siteNav li ul:hover{
+	display: none;
+}
+/* mainContent ^5c */
+#mainContent #contentHeader h1 {
+	font: normal 1.2em DejaVuSans, Helvetica, Arial, sans-serif;
+	padding-bottom: .1em;
+	letter-spacing: 1px;
+	border-bottom: 2px solid #3c6b92;
+	color: #3c6b92;
+	margin-top: 1.6em;
+}
+#mainContent #mainArticle {
+	margin-bottom: 50px;
+	float: none;
+}
+#mainContent #contentHeader h1 {
+	margin-left: 250px;
+}
+#mainContent #contentHeader #subLinks {
+	display: block;
+}
+#mainContent #contentHeader #subLinks ul,#mainContent #contentHeader #subLinks p {
+	margin-left: 250px;
+	list-style: none;
+	padding: 0;
+}
+#mainContent #contentHeader #subLinks li {
+	float: left;
+	margin-right: 25px;
+	padding-top: 10px;
+}
+#mainContent #contentHeader #subLinks a {
+	font-size: .8em;
+}
+#mainContent #mainArticle h1 {
+	text-align: right;
+}
+#mainContent div.tourDescription {
+	margin-bottom: .25em;
+}
+#mainContent .tourDescription h2 {
+	margin-top: .5em;
+}
+#mainContent a.book {
+	display:block;
+	float: right;
+	margin: 16px 25px 25px 0;
+}
+/* data tables ^5d */
+
+/* form styling ^5f */
+#mainContent fieldset {
+	padding: 40px 20px 20px 20px;
+	margin: 0 0 2em;
+	width: 610px;
+}
+/* secondaryContent ^5g */
+
+/* footer region 5h */	
+#pageFooter section {
+	width: 200px;
+}
+#pageFooter section:first-child {
+	margin-left: 75px;
+}
+#pageFooter section h1{
+	margin-bottom: 1em;
+}
+#pageFooter section h2{
+	margin-bottom: .5em;
+}
+#pageFooter section p{
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+#pageFooter section em{
+	font-size: .8em;
+}
+#pageFooter section li {
+	margin-bottom: 1em;
+}

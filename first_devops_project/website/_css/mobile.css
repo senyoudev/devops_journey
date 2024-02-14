@@ -1,0 +1,440 @@
+/* -------- color guide ----------
+#3c6b92 : main blue
+#6acce2 : light blue
+#2c566a : teal accent
+#193742 : dark blue
+#e1d8b9 : sand accent
+#cb7d20 : orange accent
+#51341a : brown
+#995522 : dark orange (used for links or high contrast accents)
+#cb202a : red accent (this color does not encode well, use only for small accents)
+#896287 : purple
+*/
+
+/* to jump to a specific section search for the unique character pair at the front of each TOC section 
+	<<<tip, highlight the special character and use the shortcut for Find Selection Cntr/Cmd + Shift + G >> */
+	
+	/* ----- Style sheet TOC ----------------
+      ^1 Global constants
+	  ^2 Global classes
+	  ^3 Home page layout
+	  ^4 Base Layout styles
+	  ^5 Region detail styles
+		  ^5a Header
+		  ^5b Navigation
+		  ^5c Main Content
+			  ^5d data tables
+			  ^5e spotlight region
+			  ^5f forms
+		  ^5g Secondary Content
+		  ^5h Footer
+*/
+/*It is important to remember that these styles are cumulative and in some cases overwrite the main.css styles. If you add to these styles, make sure you are properly overwriting previous styles*/
+
+/*Explore California Mobile Styles*/
+/* -------- import font rules ---------- */
+@import url(fonts.css);
+/* ^1 --------------------------- global constants -------------------------*/
+body {
+	text-align:center;
+	font: 90% DroidSerif, Georgia, "Times New Roman", Times, serif;
+	background: #3C6B92;
+	background: -moz-linear-gradient(top, #3c6b92 15%, #e1d8b9 90%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#3c6b92), color-stop(90%,#e1d8b9)); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c6b92', endColorstr='#e1d8b9',GradientType=0 ); 
+	margin:0;
+}
+/* ^2 ------ global classes -------- */
+#home .callOut {
+	width: 100%; 
+}
+.callOut {
+	width: 230px;
+	margin-left: 10px; 
+}
+
+/* ^3 ------------- home page specfic layout styles ----------- */
+#home #wrapper {
+	background: #fff;
+	background-image: none;
+}
+#actionCall {
+	display: none;
+	float: none;
+	height: 50px;
+}
+#actionCall a {
+	display: none;
+}
+#actionCall h1{
+	display: none;
+}
+#home #mainHeader {
+	float: none;
+}
+#home #contentWrapper{
+	margin: 0 10px;
+	padding: 10px;
+	background: #fff;
+	float: none;
+	width: 260px;
+}
+#home #mainContent {
+	float: none;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+#home #mainContent p.spotlight{
+	padding: 150px 0 0 0;
+	background: url(../_images/cycle_logo.png) no-repeat 30px 0px;
+}
+#home p.videoText {
+	width: 100%;
+}
+#home #secondaryContent {
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	padding: 0;
+}
+#home #secondaryContent h1{
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+/* ^4 --------------------- base layout styles ------------------- */
+#wrapper {
+	width: 300px;
+}
+#mainHeader {
+	float: none;
+}
+#mainContent {
+	float: none;
+	width: 280px;
+	margin:0 10px;
+	clear: both;
+	overflow: hidden;
+	padding: 0;
+}
+#secondaryContent {
+	float: none;
+	margin:0;
+	width: 100%;
+	padding:0;
+}
+#pageFooter {
+	background: #ddd;
+	overflow: hidden;
+	border-top: 1px solid #757575;
+	height: auto;
+	width: 100%;
+}
+/* ^5----------------------- region-detail styles ------------------------ */
+/*  header  ^5a*/
+
+/* navigation ^5b*/
+#siteNav h1{
+	display: block;
+	font-family: DejaVuSansCond, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 1.2em;
+	margin: 0 0 1em;
+	text-align: center;
+	color: #952;
+}
+#siteNav ul {
+	float: none;
+}
+#siteNav > ul {
+	background: #51341a;
+	list-style: none;
+	margin:0 auto;
+	padding:0;
+	margin-bottom: 25px;
+	clear: left;
+	width: 192px;
+	height: auto;
+}
+#siteNav ul > li {
+	margin: 0;
+	padding: 0;
+	float: none;
+	border-bottom: 1px solid #fff;
+}
+#siteNav li a:link, #siteNav li a:visited{
+	display: block;
+	width: 192px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	text-indent: 0px;
+	height: 40px;
+	padding: 0;
+	border: none;
+}
+#siteNav li a.current, #siteNav li a.current:hover {
+	color: #952;
+}
+#siteNav li a:hover, #siteNav li a:active{
+	border: none;
+	color: #cb7d20;
+}
+#siteNav li a:link span.tagline, #siteNav li a:visited span.tagline{
+	display: none;
+}
+#siteNav li ul {
+	display: none;
+}
+.no-js #siteNav li:hover ul, .no-js #siteNav li ul:hover{
+	display: none;
+}
+/* mainContent ^5c */
+#mainContent #contentHeader {
+	margin-bottom: 4em;
+}
+/* keep headlines the same when crumbs are present */
+#wrapper #mainContent header.hasCrumbs {
+	margin-bottom: 6em;
+}
+#mainHeader a.logo {
+	position: relative;
+	left: 0;
+	margin: 0 auto;
+}
+#mainContent p{
+	text-align: justify;
+	padding: 0 10px
+}
+#mainContent #contentHeader h1 {
+	font: normal 1.2em DejaVuSans, Helvetica, Arial, sans-serif;
+	padding-bottom: .1em;
+	letter-spacing: 1px;
+	border-bottom: 2px solid #3c6b92;
+	color: #3c6b92;
+	margin-top: 1.6em;
+}
+#mainContent #mainArticle {
+	margin-bottom: 25px;
+	float: none;
+}
+
+#mainContent #contentHeader #subLinks {
+	display: block;
+}
+#mainContent #contentHeader #subLinks ul,#mainContent #contentHeader #subLinks p {
+	list-style: none;
+	padding: 0;
+	font-size: 1em;
+}
+#mainContent #contentHeader #subLinks li {
+	float: left;
+	margin: 0;
+	padding-top: 10px;
+}
+#mainContent #contentHeader #subLinks a {
+	font-size: .8em;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+#mainContent #mainArticle h1 {
+	text-align: left;
+	font-size: 1.4em;
+	padding: 0 10px;
+}
+#mainContent #mainArticle #supportOptions h2{
+	padding: 0 10px;
+	color: #cb202a;
+	font-size: 1.2em;
+}
+#mainContent img.articleImage {
+	display: none;
+}
+#mainContent #mainArticle .multiCol {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
+}
+#mainContent #mainArticle ul.faqNav{
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+  	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+  	column-count: 2;
+	column-gap: 20px;
+	 padding: 0;
+	 width: 280px;
+	 margin: 0 auto;
+}
+#mainContent #mainArticle ul.faqNav li{
+	background: none;
+	padding: 0;
+	font-size: .8em;
+	display: block;
+	margin-left:0;
+	width: 130px
+}
+#mainContent #mainArticle ul.faqNav a{
+	background: #cb7d20;
+	padding: 5px;
+	font-family: DejaVuSansCond, Arial, sans-serif;
+	color: #fff;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+#mainContent #mainArticle ul.faqNav a:hover{
+	background: #952;
+	border: none;
+}
+#mainContent #mainArticle dl.faq dd {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #333;
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+}
+/*tour description styles*/
+#mainContent div.tourDescription {
+	border-top: 2px solid #2c566a;
+	float: none;
+	clear: both;
+	padding: 10px 0;
+	margin-bottom: 15px;
+	height: 170px;
+	overflow: hidden;
+	-webkit-transition: height 0.75s ease;
+	-moz-transition: height 0.75s ease;
+	transition: height 0.75s ease;
+}
+#mainContent div.tourDescription:hover {
+	height: 450px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#mainContent div.tourDescription img {
+	display: block;
+	margin: 0 auto 20px;
+	float: none;
+	padding: 0;
+}
+#mainContent .tourDescription h2 {
+	font-size: 1em;
+	color: #193742;
+	font-weight: normal;
+	margin-bottom: .5em;
+	clear: right;
+}
+#mainContent .tourDescription h3.price {
+	font-size: 1em;
+	color: #666;
+	font-weight: normal;
+	font-style: italic;
+	text-align: right;
+	float: none;
+	clear: right;
+	margin: .25em 0 0;
+}
+#mainContent .tourDescription p {
+	font-size: .9em;
+	line-height: 1.5;
+}
+#mainContent .tourDescription span.option {
+	font-weight: bold;
+	text-align: right;
+	display:block;
+}
+#mainContent .tourDescription a.more {
+	display:block;
+	float: right;
+	width: 95px;
+	height: 30px;
+	background: url(../_images/more_bug.gif) no-repeat left top;
+	text-indent: -1000em;
+	margin: 15px 0 0 15px;
+}
+
+#mainContent a.book {
+	display:block;
+	float: right;
+	margin: 16px 25px 25px 0;
+}
+/* data tables ^5d */
+#mainContent fieldset {
+	padding: 40px 0 10px 0;
+	margin: 0 0 2em;
+	width: 280px;
+}
+/* form styling ^5f */
+#mainContent input[type="text"], #mainContent input[type="email"],#mainContent input[type="password"],#mainContent input[type="tel"],#mainContent input[type="url"]{
+	width: 240px;
+	padding-right: 0;
+}
+#mainContent textarea {
+	width: 240px;
+}
+#mainContent #mainArticle form p {
+	padding: 0;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+#mainContent form#frmContact .col1 {
+	float: none;
+	padding-left: 20px;
+	margin-right: 20px;
+	width: 100%;
+	margin-bottom: 0;
+}
+#mainContent form#frmContact .col2, #mainContent form#frmContact .col3 {
+	float: none;
+	margin-right: 20px;
+	padding-left: 20px;
+	width: 100%;
+}
+#mainContent form#frmContact .col3 {
+	margin-bottom: 2em;
+}
+#mainContent form#frmContact label.break {
+	padding-right: 20px;
+}
+/* secondaryContent ^5g */
+#secondaryContent #specials h2 {
+	font-size: 1.2em;
+	letter-spacing:0;
+	text-align: right;
+}
+
+/* footer region 5h */	
+#pageFooter section {
+	width: 100%;
+	float: none;
+	clear: both;
+	margin-left: 25px;
+}
+#pageFooter section#quickLinks, #pageFooter section#footerResources {
+	float: left;
+	width: 100px;
+	clear: none;
+}
+#pageFooter section:first-child {
+	margin-left: 25px;
+}
+#pageFooter section h1{
+	margin-bottom: 1em;
+}
+#pageFooter section h2{
+	margin-bottom: .5em;
+}
+#pageFooter section p{
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+#pageFooter section em{
+	font-size: .8em;
+}
+#pageFooter section li {
+	margin-bottom: 1em;
+}
