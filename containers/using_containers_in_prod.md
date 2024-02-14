@@ -40,3 +40,11 @@ Containers offer several benefits for running applications in production, but th
 - **Monitor and log**: Implement proper monitoring and logging solutions to track container performance and detect security incidents. Monitor container activity and network traffic to identify potential security risks.
 
 
+## CI/CD and the platform mindset
+
+# The platform mindset : 
+- The platform mindset is a way of thinking about software development and delivery that emphasizes the use of platforms to enable rapid, scalable, and secure application deployment.
+
+Over the years, the platform mindset has evolved to include a focus on cloud-native technologies, such as containers and microservices, as well as modern development practices, such as DevOps and continuous delivery.
+
+
