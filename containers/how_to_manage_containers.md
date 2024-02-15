@@ -4,14 +4,14 @@
 
 Orchestration is the process of automating the deployment, scaling, and management of containerized applications. 
 
-# 2- Docker Swarm
+# 2- Docker Swarm : Decentralized Orchestration
 
 Docker Swarm is a container orchestration platform that allows you to manage a cluster of Docker hosts as a single virtual system. It provides features such as service discovery, load balancing, and health checks, as well as tools for managing and monitoring containerized applications. Docker Swarm is designed to be easy to use and integrates seamlessly with the Docker ecosystem.
 
 - **Task** : Container instance
 - **Service** : A set of tasks 
 
-# 3- Kubernetes
+# 3- Kubernetes : Centralized Orchestration
 
 Kubernetes is an open-source container orchestration platform that provides a way to automate the deployment, scaling, and management of containerized applications. It provides features such as service discovery, load balancing, and health checks, as well as tools for managing and monitoring containerized applications. Kubernetes is designed to be highly scalable and resilient, making it ideal for modern, cloud-native applications.
 
