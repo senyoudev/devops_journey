@@ -80,3 +80,35 @@ Multi-configuration projects are used to create Jenkins jobs that run on multipl
 Jenkins has a rich ecosystem of plugins that can be used to extend its functionality. There are thousands of plugins available for Jenkins, and they can be used to integrate Jenkins with other tools, such as version control systems, build tools, and testing frameworks.
 
 
+## Jenkins Pipeline
+
+Jenkins Pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins. Jenkins Pipeline provides an extensible set of tools for modeling simple-to-complex delivery pipelines "as code".
+
+## Jenkinsfile
+
+Example of a Jenkinsfile:
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Building"'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "Testing"'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying"'
+            }
+        }
+    }
+}
+```
+
+
