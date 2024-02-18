@@ -7,7 +7,7 @@ Welcome to my DevOps learning repository! This repository represents my journey 
 
 1. [DevOps Foundations](./devops_foundations)
 2. [Containers](./containers)
-3. [Docker](./docker)
+3. [Docker](./Docker)
 4. [Kubernetes](./kubernetes)
 5. [Continuous Integration (CI)](./ci)
 6. [Infrastructure as Code (IaC)](./iac)
