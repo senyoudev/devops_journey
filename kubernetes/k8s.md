@@ -8,6 +8,13 @@ The image below shows the architecture of a Kubernetes cluster.
 
 ![Kubernetes architecture](https://kubernetes.io/images/docs/kubernetes-cluster-architecture.svg)
 
+The Kubernetes architecture consists of the following components:
+
+- Control Plane: Manages the cluster and includes components like the API server, controller manager, scheduler, etcd (key-value store), and more.
+- Nodes: The machines (virtual or physical) that run workloads in containers. Each node has a Kubelet (agent), Kube-proxy (networking), and container runtime (e.g., Docker).
+- Pods: The smallest deployable unit in Kubernetes, representing a single instance of a running process in your cluster.
+- Namespaces: Provide a way to create isolated environments within the same cluster.
+
 ## Create a namespace
 
 namespace is a way to divide cluster resources between multiple users. It is used to create a virtual cluster within a physical cluster.
